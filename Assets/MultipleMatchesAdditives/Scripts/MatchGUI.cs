@@ -1,8 +1,5 @@
-﻿using System;
-using Mirror;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-//using static MultipleMatchesAdditives.MultiSceneNetManager;
 
 namespace MultipleMatchesAdditives
 {
@@ -38,6 +35,8 @@ namespace MultipleMatchesAdditives
         {
             matchId = infos.sceneMatchID;
             matchID.text = $"{infos.sceneMatchID}";
+            // we will trim the scene names here, as this example project includes the project name
+            // likely not needed for your own project
             if (infos.subScene.name.Length > 15)
             {
                 matchScene.text = ".." + infos.subScene.name[15..];
