@@ -12,11 +12,13 @@ namespace MultipleMatchesAdditives
         public GameObject clientObjectsToInstantiate;
         private GameObject clientObjectsReference;
         public MultiSceneNetManager networkManager;
+        public GameObject cameraObject;
 
         /// <summary>
         /// Called on every NetworkBehaviour when it is activated on a client.
         /// <para>Objects on the host have this function called, as there is a local client on the host. The values of SyncVars on object are guaranteed to be initialized correctly with the latest state from the server when this function is called on the client.</para>
         /// </summary>
+        /*
         public override void OnStartClient()
         {
             // work around to stop player host from instantiating on each subscene creation
@@ -38,7 +40,8 @@ namespace MultipleMatchesAdditives
                 SetupMap();
             }
         }
-
+        */
+        /*
         public void Awake()
         {
             //Debug.Log("MatchManager Awake");
@@ -59,12 +62,16 @@ namespace MultipleMatchesAdditives
                 SetupMap();
             }
         }
-
+        */
         private void SetupMap()
         {
             //Debug.Log("OnStartClient SetupMap");
-            networkManager.canvasController.offlineCamera.SetActive(false);
-
+            //if (networkManager && networkManager.canvasController)
+            //{
+               // networkManager.canvasController.offlineCamera.SetActive(false);
+                //cameraObject.SetActive(true);
+            //}
+            //cameraObject.SetActive(true);
             //clientObjectsReference = Instantiate(clientObjectsToInstantiate);
             //SceneManager.MoveGameObjectToScene(clientObjectsReference, SceneManager.GetSceneAt(SceneManager.sceneCount - 1));
 

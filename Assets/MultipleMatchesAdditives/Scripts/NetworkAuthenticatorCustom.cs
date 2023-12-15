@@ -284,6 +284,7 @@ namespace MultipleMatchesAdditives
                         networkManager.subSceneList.Clear();
                         networkManager.subSceneList = msg.subSceneListAuth;
                         networkManager.canvasController.RefreshMatchList();
+                        ClientReject();
                         break;
                     }
                 case AuthOperation.Reject:

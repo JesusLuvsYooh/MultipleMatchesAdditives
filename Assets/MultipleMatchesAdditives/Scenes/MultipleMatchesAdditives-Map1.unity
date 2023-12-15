@@ -773,8 +773,9 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  clientObjectsToInstantiate: {fileID: 3620428027734952655, guid: ef16d5ff64eb14c32befe2953c1cf90a, type: 3}
+  clientObjectsToInstantiate: {fileID: 0}
   networkManager: {fileID: 0}
+  cameraObject: {fileID: 3938928160007758925}
 --- !u!114 &4136116391135004325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,7 +918,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4658742554529380703}
-  - component: {fileID: 7470228046298399169}
   m_Layer: 0
   m_Name: ClientObjects
   m_TagString: Untagged
@@ -1081,21 +1081,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531620078881151590}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &7470228046298399169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6349800432856872339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4719a7b86b47a46efb5f15428c9c628e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoints: []
-  cameraObject: {fileID: 3938928160007758925}
-  clientObjectsToEnable: {fileID: 0}
 --- !u!4 &7631331368550843167
 Transform:
   m_ObjectHideFlags: 0

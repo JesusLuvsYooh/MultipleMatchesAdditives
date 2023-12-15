@@ -15,6 +15,7 @@ namespace MultipleMatchesAdditives
         public Text playerCount;
 
         public CanvasController canvasController;
+        private string mapName;
 
         public void Awake()
         {
@@ -37,14 +38,25 @@ namespace MultipleMatchesAdditives
             matchID.text = $"{infos.sceneMatchID}";
             // we will trim the scene names here, as this example project includes the project name
             // likely not needed for your own project
-            if (infos.subScene.name.Length > 15)
+            mapName = networkManager.sceneArray[infos.subSceneNumber];
+            mapName = mapName.Replace(".unity", "");
+
+            if (mapName.Length > 15)
             {
-                matchScene.text = ".." + infos.subScene.name[15..];
+                matchScene.text = ".." + mapName.Substring(mapName.Length - 15);
             }
             else
             {
-                matchScene.text = $"{infos.subScene.name}";
+                matchScene.text = $"{mapName}";
             }
+            //if (infos.subScene.name.Length > 15)
+            //{
+            //    matchScene.text = ".." + infos.subScene.name[15..];
+            //}
+            //else
+            //{
+            //    matchScene.text = $"{infos.subScene.name}";
+            //}
             playerCount.text = $"{infos.playerCount}/{ infos.playerCountMax}";
         }
     }
