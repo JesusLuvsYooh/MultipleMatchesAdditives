@@ -11,6 +11,11 @@
 
 /Users/pathToFile -mode server -frameRate 60 -port 7777 -maxConnections 101 -maxMatches 10 -maxPlayersPerMatch 2
 
+New addition, Post Build script that copies an example.bat file into the output folder, edit and run this
+(optional feature, may need adjusting depending on platform and platform versions)
+
+<img width="205" alt="Screenshot 2024-02-03 at 09 48 51" src="https://github.com/JesusLuvsYooh/MultipleMatchesAdditives/assets/57072365/bef4ed13-bcde-4ef1-a419-9a50ea616ac4">
+
 ## ToDo:
 - Tidy up.
 - Add comments and tooltips.
