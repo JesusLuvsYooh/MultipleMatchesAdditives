@@ -1,0 +1,1 @@
+start cmd /k ServerArgs -mode server -frameRate 60 -port 7777 -maxConnections 101 -maxMatches 10 -maxPlayersPerMatch 2
