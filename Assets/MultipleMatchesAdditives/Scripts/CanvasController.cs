@@ -60,7 +60,18 @@ namespace MultipleMatchesAdditives
         private void OnInputFieldServerIDChanged()
         {
             int.TryParse(inputFieldServerID.text, out networkManager.networkAuthenticatorCustom.matchId);
-            Debug.Log(gameObject.name + ": inputfield match id-" + networkManager.networkAuthenticatorCustom.matchId);
+            //Debug.Log(gameObject.name + ": inputfield match id-" + networkManager.networkAuthenticatorCustom.matchId);
+            if (inputFieldServerID.text != "")
+            {
+                selectedMatch = networkManager.networkAuthenticatorCustom.matchId;
+                joinButton.interactable = true;
+            }
+            else
+            {
+                selectedMatch = 0;
+                networkManager.networkAuthenticatorCustom.matchId = 0;
+                joinButton.interactable = false;
+            }
         }
 
         public void SelectMatch(int matchId)

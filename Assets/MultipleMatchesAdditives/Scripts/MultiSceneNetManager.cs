@@ -91,6 +91,7 @@ namespace MultipleMatchesAdditives
                 }
             }
 
+           // Debug.Log(gameObject.name + " - currentPlayerFromList.playerMatchID:" + currentPlayerFromList.playerMatchID);
             if (currentPlayerFromList.playerMatchID > 0)
             {
                 subSceneMatchID = currentPlayerFromList.playerMatchID;
@@ -106,6 +107,7 @@ namespace MultipleMatchesAdditives
             foreach (SubSceneList _subSceneList in subSceneList)
             {
                 if (//_subSceneList.sceneMatchID == subSceneMatchID &&
+                    (_subSceneList.sceneMatchID == currentPlayerFromList.playerMatchID || currentPlayerFromList.playerMatchID <= 0) &&
                     _subSceneList.playerCount < _subSceneList.playerCountMax &&
                     _subSceneList.playerCount < maxPlayersPerMatch &&
                     (_subSceneList.subSceneNumber == currentPlayerFromList.playerMap || currentPlayerFromList.playerMap <= 0))
