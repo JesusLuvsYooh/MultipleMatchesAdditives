@@ -14,6 +14,26 @@ namespace MultipleMatchesAdditives
         public MultiSceneNetManager networkManager;
         public GameObject cameraObject;
 
+        public Scene localAdditiveScene;
+        public int localMatchId;
+
+        public void Start()
+        {
+            networkManager = NetworkManager.singleton.GetComponent<MultiSceneNetManager>();
+            localAdditiveScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1);
+
+            if (networkManager.subSceneList.Count > 0)
+            {
+                foreach (SubSceneList _subSceneList in networkManager.subSceneList)
+                {
+                    if (_subSceneList.subScene == localAdditiveScene)
+                    {
+                        localMatchId = _subSceneList.sceneMatchID;
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// Called on every NetworkBehaviour when it is activated on a client.
         /// <para>Objects on the host have this function called, as there is a local client on the host. The values of SyncVars on object are guaranteed to be initialized correctly with the latest state from the server when this function is called on the client.</para>
